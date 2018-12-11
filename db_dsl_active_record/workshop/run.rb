@@ -1,7 +1,7 @@
 require 'pry'
-require 'yaml'
+require 'config/initializers/database'
 
-DB_CONFIG = YAML.load(File.open('config/database.yml'))[ENV['RAILS_ENV']].freeze
+ActiveRecord::Base.establish_connection(DB_CONFIG)
 
-puts DB_CONFIG
+puts ActiveRecord::Base.connection
 puts 'Gotcha! It works for you, master!'
