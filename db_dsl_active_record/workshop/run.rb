@@ -2,8 +2,10 @@ require 'pry'
 require './config/initializers/database'
 
 
-class Shop < ActiveRecord::Base
+class User < ActiveRecord::Base
 
 end
 
-Shop.create(name: 'Ali')
+User.create(first_name: 'Doctor', last_name: 'Who')
+
+puts User.first.first_name

@@ -42,10 +42,10 @@ namespace :g do
 
     content = <<-RUBY
 class #{migration_class} < ActiveRecord::Migration[5.1]
-  def self.up
+  def up
   end
 
-  def self.down
+  def down
   end
 end
     RUBY
