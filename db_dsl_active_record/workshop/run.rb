@@ -2,10 +2,8 @@ require 'pry'
 require './config/initializers/database'
 
 
-class User < ActiveRecord::Base
-
-end
-
-User.create(first_name: 'Doctor', last_name: 'Who')
-
-puts User.first.first_name
+# User.create!(first_name: '  Somebody     ', last_name: "Who")
+Pruduct.create!(name: 'Samsung', description: ' ', price: 100)
+# User.create(first_name: 'Doctor', last_name: 'Who')
+puts Product
+# puts User.last.full_name
